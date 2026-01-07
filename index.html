@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Greeting </title>
-    <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-        #greeting-message { font-size: 2em; color: #333; }
-    </style>
+    <title>Greeting</title>
 </head>
 <body>
-    <div id="greeting-message"></div>
-    <script src="script.js"></script>
+
+<h2 id="text"></h2>
+
+<script>
+    var time = new Date().getHours();
+    var greeting;
+
+    if (time < 12) {
+        greeting = "Good Morning";
+    } 
+    else if (time < 17) {
+        greeting = "Good Afternoon";
+    } 
+    else {
+        greeting = "Good Evening";
+    }
+
+    document.getElementById("text").innerText = greeting;
+</script>
+
 </body>
 </html>
+
