@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Greeting</title>
+    <title>Dynamic Greeting</title>
 </head>
 <body>
 
-<h2 id="text"></h2>
+<h1>Welcome!</h1>
+<p id="text">Loading...</p>
 
 <script>
     var time = new Date().getHours();
-    var greeting;
+    var greeting = "";
 
     if (time < 12) {
         greeting = "Good Morning";
-    } 
-    else if (time < 17) {
+    } else if (time < 18) {
         greeting = "Good Afternoon";
-    } 
-    else {
+    } else {
         greeting = "Good Evening";
     }
 
-    document.getElementById("text").innerText = greeting;
+    document.getElementById("text").innerHTML = greeting;
 </script>
 
 </body>
