@@ -6,6 +6,7 @@
 <body>
 
 <h1>Welcome!</h1>
+<h2 id="msg"></h2>
 
 <script>
     var time = new Date().getHours();
@@ -19,7 +20,7 @@
         greeting = "Good Evening";
     }
 
-    document.write(greeting);
+    document.getElementById("msg").innerHTML = greeting;
 </script>
 
 </body>
